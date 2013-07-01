@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
-gem 'sqlite3'
+gem 'pg'
 gem 'haml', '3.1.6'
 gem 'haml-rails'
 gem 'unicorn'
