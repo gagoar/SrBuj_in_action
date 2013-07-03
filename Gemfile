@@ -8,10 +8,10 @@ gem 'haml-rails'
 gem 'unicorn'
 
 group :assets do
-  gem 'uglifier',     '>= 1.0.3'
+  gem 'uglifier', '>= 1.0.3'
   gem 'therubyracer'
   gem 'less'
   gem 'less-rails-bootstrap'
   gem 'jquery-rails'
-  gem 'SrBuj'
+  gem 'SrBuj', '0.9.1'
 end
