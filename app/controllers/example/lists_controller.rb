@@ -7,7 +7,6 @@ class Example::ListsController < Example::DummyController
 
   def show
     @tasks = @list.tasks
-
     respond_to do |format|
       format.html
       format.js { render partial: 'show', content_type: 'text/html' }
@@ -16,7 +15,6 @@ class Example::ListsController < Example::DummyController
 
   def new
     @list = List.new
-
     render partial: 'new', content_type: 'text/html'
   end
 
@@ -26,7 +24,6 @@ class Example::ListsController < Example::DummyController
 
   def create
     @list = List.new params[:list]
-
     if @list.save
       js_notify message: t('app.created', model: @list.class)
       render partial: @list, content_type: 'text/html'
@@ -48,7 +45,6 @@ class Example::ListsController < Example::DummyController
 
   def destroy
     @list.destroy
-
     js_redirect(to: example_lists_path)
   end
 

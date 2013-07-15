@@ -8,7 +8,6 @@ class Example::TasksController < Example::DummyController
 
   def create
     @task = @list.tasks.new params[:task]
-
     if @task.save
       js_notify message: t('app.created', model: @task.class)
       render partial: @task, content_type: 'text/html'
@@ -30,7 +29,6 @@ class Example::TasksController < Example::DummyController
 
   def destroy
     @task.destroy
-
     render nothing: true, content_type: 'text/html'
   end
 
