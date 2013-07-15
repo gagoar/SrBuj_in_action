@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(:version => 20130331232820) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "todos", :force => true do |t|
+  create_table "tasks", :force => true do |t|
     t.integer  "list_id"
     t.string   "content"
     t.date     "done_at"

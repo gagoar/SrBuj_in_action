@@ -1,17 +1,17 @@
-class Example::TodosController < Example::DummyController
+class Example::TasksController < Example::DummyController
   before_filter :get_list, only: [ :edit, :create, :update, :destroy ]
-  before_filter :get_todo, only: [ :edit, :update, :destroy ]
+  before_filter :get_task, only: [ :edit, :update, :destroy ]
 
   def edit
     render partial: 'edit', content_type: 'text/html'
   end
 
   def create
-    @todo = @list.todos.new params[:todo]
+    @task = @list.tasks.new params[:task]
 
-    if @todo.save
-      js_notify message: t('app.created', model: @todo.class)
-      render partial: @todo, content_type: 'text/html'
+    if @task.save
+      js_notify message: t('app.created', model: @task.class)
+      render partial: @task, content_type: 'text/html'
     else
       js_notify message: t('app.error')
       render partial: 'form', status: :unprocessable_entity
@@ -19,9 +19,9 @@ class Example::TodosController < Example::DummyController
   end
 
   def update
-    if @todo.update_attributes params[:todo]
-      js_notify message: t('app.updated', model: @todo.class)
-      render partial: @todo, content_type: 'text/html'
+    if @task.update_attributes params[:task]
+      js_notify message: t('app.updated', model: @task.class)
+      render partial: @task, content_type: 'text/html'
     else
       js_notify message: t('app.error')
       render partial: 'edit', status: :unprocessable_entity
@@ -29,14 +29,14 @@ class Example::TodosController < Example::DummyController
   end
 
   def destroy
-    @todo.destroy
+    @task.destroy
 
     render nothing: true, content_type: 'text/html'
   end
 
   private
-    def get_todo
-      @todo = @list.todos.find params[:id]
+    def get_task
+      @task = @list.tasks.find params[:id]
     end
 
     def get_list

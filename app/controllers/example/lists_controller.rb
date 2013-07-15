@@ -6,7 +6,7 @@ class Example::ListsController < Example::DummyController
   end
 
   def show
-    @todos = @list.todos
+    @tasks = @list.tasks
 
     respond_to do |format|
       format.html

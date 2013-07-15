@@ -3,7 +3,7 @@ SrBujInAction::Application.routes.draw do
 
   namespace :example do
     resources :lists do
-      resources :todos
+      resources :tasks
     end
   end
 end

@@ -1,12 +1,12 @@
 .modal
   .modal-header
-    %h2 Editing todo
+    %h2 Editing tasks
   .modal-body
-    = form_for @todo, url: polymorphic_path([:example, @list, @todo]), html: { class: 'form-horizontal', data: { remote: true, target: dom_id(@todo), modal: true, error: 'modal', respond_as: :put } } do |f|
+    = form_for @task, url: polymorphic_path([:example, @list, @task]), html: { class: 'form-horizontal', data: { remote: true, target: dom_id(@task), modal: true, error: 'modal', respond_as: :put } } do |f|
       .control-group
         = f.label :content, class: 'control-label'
         .controls
           = f.text_field :content, class: 'input', autofocus: true
-          = errors_for(@todo, :conten)
+          = errors_for(@task, :conten)
   .modal-footer
     = link_to_function t('app.close'), "$('#modal').modal('toggle');", class: 'btn'

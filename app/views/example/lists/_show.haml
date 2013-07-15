@@ -3,12 +3,12 @@
   .pull-right
     = link_to 'Destroy', example_list_path(@list), data: { remote: true, confirm: 'Are you sure?', method: :delete }
 
-= render partial: 'example/todos/form'
+= render partial: 'example/tasks/form'
 
-%table#todos.table
+%table#tasks.table
   %thead
     %tr
       %th Task
       %th
   %tbody
-    = render @todos
+    = render @tasks

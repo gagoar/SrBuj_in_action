@@ -1,6 +1,0 @@
-= form_for Todo.new, url: example_list_todos_path(@list), html: { class: 'form-horizontal', data: { remote: true, target: 'todos', error: 'new_todo' } } do |f|
-  .control-group
-    = f.label 'Task to Do', class: 'control-label'
-    .controls
-      = f.text_field :content, class: 'input', autofocus: true
-      = errors_for(@todo, :content)
