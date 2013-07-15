@@ -1,10 +1,9 @@
 SrBujInAction::Application.routes.draw do
+  root to: 'example/lists#index'
 
-  root to: 'lists#index'
-
-  resources :lists do
-    resources :todos
+  namespace :example do
+    resources :lists do
+      resources :todos
+    end
   end
-
-
 end

@@ -1,0 +1,12 @@
+.modal
+  .modal-header
+    %h2 New list
+  .modal-body
+    = form_for @list, url: polymorphic_path([ :example, @list ]), html: { class: 'form-horizontal', data: { remote: true, target: 'lists', modal: true, error: 'modal' } } do |f|
+      .control-group
+        = f.label :name, class: 'control-label'
+        .controls
+          = f.text_field :name, class: 'input', autofocus: true
+          = errors_for(@list, :name)
+  .modal-footer
+    = link_to_function t('app.close'), "$('#modal').modal('toggle');", class: 'btn'

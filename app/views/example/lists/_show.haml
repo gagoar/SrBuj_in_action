@@ -1,0 +1,14 @@
+%h2
+  = @list.name
+  .pull-right
+    = link_to 'Destroy', example_list_path(@list), data: { remote: true, confirm: 'Are you sure?', method: :delete }
+
+= render partial: 'example/todos/form'
+
+%table#todos.table
+  %thead
+    %tr
+      %th Task
+      %th
+  %tbody
+    = render @todos

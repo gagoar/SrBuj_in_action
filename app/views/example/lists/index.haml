@@ -1,0 +1,11 @@
+%h1 Listing lists
+
+%table#lists.table
+  %thead
+    %tr
+      %th List
+      %th
+  %tbody
+    = render @lists
+%br
+= link_to 'New List', new_example_list_path, class: 'btn btn-primary pull-right', data: { remote: true, target: 'modal', modal: true }

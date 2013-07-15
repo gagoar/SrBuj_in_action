@@ -1,0 +1,4 @@
+= content_tag_for(:tr, todo) do
+  %td= todo.content
+  %td= link_to 'Edit', edit_example_list_todo_path(@list, todo), data: { remote: true, target: 'modal', modal: true }
+  %td= link_to 'Destroy', example_list_todo_path(@list, todo), data: { remote: true, target: dom_id(todo), confirm: 'Are you sure?', method: :delete }
