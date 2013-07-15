@@ -1,3 +1,5 @@
 class Todo < ActiveRecord::Base
-  # attr_accessible :title, :body
+  attr_accessible :content
+
+  validates :content, presence: true
 end
