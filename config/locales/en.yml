@@ -1,5 +1,6 @@
 en:
   app:
-    error: 'Something went wrong'
+    close: 'Close'
     created: "%{model} created"
+    error: 'Something went wrong'
     updated: "%{model} updated"
