@@ -1,0 +1,4 @@
+= content_tag_for(:tr, task) do
+  %td= task.content
+  %td= link_to 'Edit', edit_example_list_task_path(@list, task), data: { remote: true, target: 'modal', modal: true }
+  %td= link_to 'Destroy', example_list_task_path(@list, task), data: { remote: true, target: dom_id(task), confirm: 'Are you sure?', method: :delete }

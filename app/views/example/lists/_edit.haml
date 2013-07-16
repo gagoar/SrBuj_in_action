@@ -1,0 +1,12 @@
+.modal
+  .modal-header
+    %h2 Editing list
+  .modal-body
+    = form_for @list, url: polymorphic_path([ :example, @list ]), html: { class: 'form-horizontal', data: { remote: true, target: dom_id(@list), modal: true, error: 'modal', respond_as: :put } } do |f|
+      .control-group
+        = f.label :name, class: 'control-label'
+        .controls
+          = f.text_field :name, class: 'input', autofocus: true
+          = errors_for(@list, :name)
+  .modal-footer
+    .btn{data: { dismiss: 'modal' }}= t('app.close')
