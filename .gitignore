@@ -29,3 +29,6 @@ capybara-*.html
 **.orig
 rerun.txt
 pickle-email-*.html
+.DS_Store
+config/database.yml
+config/initializers/secret_token.rb

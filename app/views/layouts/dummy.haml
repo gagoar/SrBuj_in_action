@@ -1,0 +1,15 @@
+!!!
+%html
+  %head
+    %title SrBujInAction
+    = stylesheet_link_tag 'application', media: 'all'
+    = csrf_meta_tags
+  %body
+    .navbar.navbar-fixed-top
+      .navbar-inner
+        .container
+          = link_to 'SrBuj', root_path, class: 'brand'
+    #content.container.well
+      = yield
+  #modal
+  = javascript_include_tag 'application'

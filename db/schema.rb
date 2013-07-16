@@ -14,11 +14,12 @@
 ActiveRecord::Schema.define(:version => 20130331232820) do
 
   create_table "lists", :force => true do |t|
+    t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
 
-  create_table "todos", :force => true do |t|
+  create_table "tasks", :force => true do |t|
     t.integer  "list_id"
     t.string   "content"
     t.date     "done_at"

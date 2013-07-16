@@ -1,5 +1,6 @@
-# Sample localization file for English. Add more files in this directory for other locales.
-# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
-
 en:
-  hello: "Hello world"
+  app:
+    close: 'Close'
+    created: "%{model} created"
+    error: 'Something went wrong'
+    updated: "%{model} updated"
