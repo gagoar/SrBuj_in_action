@@ -9,4 +9,4 @@
           = f.text_field :name, class: 'input', autofocus: true
           = errors_for(@list, :name)
   .modal-footer
-    = link_to_function t('app.close'), "$('#modal').modal('toggle');", class: 'btn'
+    .btn{ data: { dismiss: 'modal' } }= t('app.close')
